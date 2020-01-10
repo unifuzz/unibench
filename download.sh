@@ -13,3 +13,24 @@ d http://www.swftools.org/swftools-0.9.2.tar.gz swftools-0.9.2.tar.gz
 d https://www.ffmpeg.org/releases/ffmpeg-4.0.1.tar.gz ffmpeg-4.0.1.tar.gz
 d https://flvmeta.com/files/flvmeta-1.2.1.tar.gz flvmeta-1.2.1.tar.gz
 d https://github.com/axiomatic-systems/Bento4/archive/v1.5.1-628.zip Bento4-1.5.1-628.zip
+d ftp://download.gnu.org.ua/pub/release/cflow/cflow-1.6.tar.gz cflow-1.6.tar.gz
+d http://invisible-mirror.net/archives/ncurses/ncurses-6.1.tar.gz ncurses-6.1.tar.gz
+d https://github.com/stedolan/jq/releases/download/jq-1.5/jq-1.5.zip jq-1.5.zip
+d https://mujs.com/downloads/mujs-1.0.2.zip mujs-1.0.2.zip
+d https://xpdfreader-dl.s3.amazonaws.com/old/xpdf-4.00.tar.gz xpdf-4.00.tar.gz 
+d https://www.sqlite.org/cgi/src/zip/8a8ffc86/SQLite-8a8ffc86.zip SQLite-3.8.9.zip
+
+if [ ! -f "binutils-5279478.zip" ]; then
+    git clone -n git://sourceware.org/git/binutils-gdb.git
+    cd binutils-gdb
+    git checkout 5279478
+    rm -r .git
+    cd ..
+    mv binutils-gdb binutils_5279478
+    zip -r binutils-5279478.zip binutils_5279478/
+    rm -r binutils_5279478/
+fi
+
+d ftp://sourceware.org/pub/binutils/releases/binutils-2.28.tar.gz binutils-2.28.tar.gz
+d https://www.tcpdump.org/release/tcpdump-4.8.1.tar.gz tcpdump-4.8.1.tar.gz
+d https://www.tcpdump.org/release/libpcap-1.8.1.tar.gz libpcap-1.8.1.tar.gz
