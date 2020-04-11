@@ -15,6 +15,8 @@
 
 ## Audio
 
+Attention: running mp3gain may change the input file, **make a copy of your crash files before validating**, otherwise you may not be able to reproduce crashes.
+
 | Program | Version        | Official Website                | Get Latest                                                   | Issue                                                      | Fuzzing Arguments                              | CVE link                                                     |
 | ------- | -------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | lame    | 3.99.5         | https://lame.sourceforge.io/    | https://sourceforge.net/p/lame/svn/HEAD/tree/trunk/lame/     | [sourceforge](https://sourceforge.net/p/lame/bugs/)        | @@ /dev/null                                   | [link](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=lame) |
