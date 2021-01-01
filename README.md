@@ -1,7 +1,7 @@
 # UniBench
 20 benchmark programs
 
-
+If you are going to fuzz these programs, checkout our [Dockerfile repo](https://github.com/unifuzz/unibench_build) for building with fuzzers!
 
 ## Image
 
