@@ -3,6 +3,41 @@
 
 If you are going to fuzz these programs, checkout our [Dockerfile repo](https://github.com/unifuzz/unibench_build) for building with fuzzers!
 
+<details>
+  <summary>Structed Data</summary>
+
+```
+data = [
+    #id, prog, commandline, seed_folder
+    [1, "exiv2", "@@", "jpg"],
+    [2,"tiffsplit","@@","tiff"],
+    [3,"mp3gain","@@","mp3"],
+    [4,"wav2swf","-o /dev/null @@","wav"],
+    [5,"pdftotext","@@ /dev/null","pdf"],
+    [6,"infotocap","-o /dev/null @@","text"],
+    [7,"mp42aac","@@ /dev/null","mp4"],
+    [8,"flvmeta","@@","flv"],
+    [9,"objdump","-S @@","obj"],
+    [14, "tcpdump", "-e -vv -nr @@", "tcpdump100"],
+    [15, "ffmpeg", "-y -i @@ -c:v mpeg4 -c:a copy -f mp4 /dev/null", "ffmpeg100"],
+    [16, "gdk-pixbuf-pixdata", "@@ /dev/null", "pixbuf"],
+    [17, "cflow", "@@", "cflow"],
+    [18, "nm-new", "-A -a -l -S -s --special-syms --synthetic --with-symbol-versions -D @@", "nm"],
+    [19, "sqlite3", " < @@", "sql"],
+    [20, "lame3.99.5", "@@ /dev/null", "lame3.99.5"],
+    [21, "jhead", "@@", "jhead"],
+    [22, "imginfo", "-f @@", "imginfo"],
+    [23, "jq", ". @@", "json"],
+    [24, "mujs", "@@", "mujs"],
+    # below is the LAVA-M settings
+    [10,"uniq","@@","uniq"],
+    [11,"base64","-d @@","base64"],
+    [12,"md5sum","-c @@","md5sum"],
+    [13,"who","@@","who"],
+]
+```
+</details>
+
 ## Image
 
 | Program            | Version           | Official Website                        | Get Latest                                | Issue                                                        | Fuzzing Arguments | CVE                                                          |
