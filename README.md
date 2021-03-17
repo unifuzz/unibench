@@ -5,6 +5,8 @@ If you are going to fuzz these programs, checkout our [Dockerfile repo](https://
 
 ## Structed Data (id, prog, commandline, seed_folder)
 
+[seed files](https://github.com/unifuzz/seeds/tree/master/general_evaluation)
+
 ```
 data = [
     #id, prog, commandline, seed_folder
